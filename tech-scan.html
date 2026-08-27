@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Recurring US and China tech investment briefing: index moves, company news, and policy factors for 24-27 August 2026.">
+<title>Tech Investment Scan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
+<style>
+  :root {
+    color-scheme: light;
+    --ground:      #eceef1;
+    --surface:     #ffffff;
+    --surface-2:   #f5f6f8;
+    --ink:         #14181c;
+    --ink-2:       #4e565e;
+    --ink-3:       #7f8891;
+    --rule:        #d5dade;
+    --rule-soft:   #e6e9ec;
+    --deep:        #0f3d63;
+    --gain:        #2a78d6;
+    --loss:        #e34948;
+    --grid:        #dfe3e7;
+    --chip-bd:     #c3cad1;
+    --shadow:      0 1px 2px rgba(20,24,28,.06), 0 8px 24px -16px rgba(20,24,28,.28);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --ground:    #101315;
+      --surface:   #191d20;
+      --surface-2: #21262a;
+      --ink:       #eef1f3;
+      --ink-2:     #a8b1b9;
+      --ink-3:     #78828b;
+      --rule:      #2f363b;
+      --rule-soft: #262c31;
+      --deep:      #9dc4e8;
+      --gain:      #3987e5;
+      --loss:      #e66767;
+      --grid:      #2b3236;
+      --chip-bd:   #3a4248;
+      --shadow:    0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --ground:    #101315;
+    --surface:   #191d20;
+    --surface-2: #21262a;
+    --ink:       #eef1f3;
+    --ink-2:     #a8b1b9;
+    --ink-3:     #78828b;
+    --rule:      #2f363b;
+    --rule-soft: #262c31;
+    --deep:      #9dc4e8;
+    --gain:      #3987e5;
+    --loss:      #e66767;
+    --grid:      #2b3236;
+    --chip-bd:   #3a4248;
+    --shadow:    0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Newsreader", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px 88px; }
+
+  .mono { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .num  { font-variant-numeric: tabular-nums; }
+
+  /* ---------- masthead ---------- */
+  .masthead { border-bottom: 2px solid var(--ink); padding: 40px 0 18px; margin-bottom: 4px; }
+  .kicker {
+    font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 500;
+    letter-spacing: .16em; text-transform: uppercase; color: var(--ink-3);
+    display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline;
+  }
+  .kicker .live { color: var(--deep); }
+  h1 {
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700; font-size: clamp(34px, 6vw, 58px); line-height: 1.02;
+    letter-spacing: -.025em; margin: 14px 0 10px; text-wrap: balance;
+  }
+  .dateline {
+    font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--ink-2);
+    display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center;
+  }
+  .dateline b { color: var(--ink); font-weight: 600; }
+  .sep { color: var(--ink-3); }
+
+  /* ---------- lede ---------- */
+  .lede {
+    font-size: 20px; line-height: 1.55; color: var(--ink); max-width: 64ch;
+    margin: 26px 0 4px; text-wrap: pretty;
+  }
+  .lede em { font-style: italic; color: var(--ink-2); }
+
+  /* ---------- section headers ---------- */
+  section { margin-top: 54px; }
+  .sec-head { display: flex; align-items: baseline; gap: 14px; border-bottom: 1px solid var(--ink); padding-bottom: 10px; margin-bottom: 22px; }
+  .sec-num {
+    font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 600;
+    color: var(--deep); letter-spacing: .08em; flex: none;
+  }
+  .sec-head h2 {
+    font-family: "Archivo", Arial, sans-serif; font-weight: 600;
+    font-size: clamp(21px, 3vw, 27px); letter-spacing: -.015em; margin: 0; flex: 1;
+  }
+  .sec-note { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--ink-3); letter-spacing: .04em; text-align: right; }
+
+  @media (max-width: 560px) {
+    .sec-head { flex-wrap: wrap; gap: 4px 12px; }
+    .sec-num { order: 1; }
+    .sec-head h2 { order: 2; flex: 1 1 100%; }
+    .sec-note { order: 3; flex: 1 1 100%; text-align: left; }
+  }
+
+  /* ---------- stat tiles ---------- */
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(196px, 100%), 1fr)); gap: 12px; margin-bottom: 30px; }
+  .tile { background: var(--surface); border: 1px solid var(--rule); border-radius: 3px; padding: 15px 16px 14px; box-shadow: var(--shadow); }
+  .tile .name { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+  .tile .lvl { font-family: "Archivo", Arial, sans-serif; font-weight: 600; font-size: 26px; letter-spacing: -.02em; margin-top: 9px; font-variant-numeric: tabular-nums; }
+  .tile .chg { font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600; margin-top: 4px; font-variant-numeric: tabular-nums; display: flex; align-items: center; gap: 6px; }
+  .tile .asof { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--ink-3); margin-top: 8px; letter-spacing: .03em; }
+  .up { color: var(--gain); }
+  .down { color: var(--loss); }
+  .arrow { font-size: 11px; }
+
+  /* ---------- chart ---------- */
+  .panels { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr)); gap: 10px 26px; background: var(--surface); border: 1px solid var(--rule); border-radius: 3px; padding: 20px 18px 12px; box-shadow: var(--shadow); }
+  .panel-title { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 2px 2px; }
+  .panel-title span { color: var(--ink-3); text-transform: none; letter-spacing: .02em; }
+  .chart-cap { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--ink-3); line-height: 1.55; margin: 14px 2px 0; grid-column: 1 / -1; border-top: 1px solid var(--rule-soft); padding-top: 12px; }
+  svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .bar { transition: opacity .12s ease; cursor: default; }
+  .panels:hover .bar { opacity: .55; }
+  .panels .bar:hover { opacity: 1; }
+  .lbl { font-family: "IBM Plex Mono", monospace; font-size: 11px; fill: var(--ink-2); }
+  .lbl-strong { fill: var(--ink); font-weight: 500; }
+  .val { font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .tick { font-family: "IBM Plex Mono", monospace; font-size: 10px; fill: var(--ink-3); }
+  .na { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; fill: var(--ink-3); font-style: italic; }
+
+  /* ---------- table ---------- */
+  .tbl-wrap { overflow-x: auto; margin-top: 14px; border: 1px solid var(--rule); border-radius: 3px; background: var(--surface); }
+  table { border-collapse: collapse; width: 100%; min-width: 620px; font-family: "IBM Plex Mono", monospace; font-size: 12.5px; }
+  th, td { text-align: right; padding: 9px 14px; border-bottom: 1px solid var(--rule-soft); font-variant-numeric: tabular-nums; }
+  th:first-child, td:first-child { text-align: left; }
+  thead th { font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; background: var(--surface-2); border-bottom: 1px solid var(--rule); }
+  tbody tr:last-child td { border-bottom: 0; }
+  td.dim { color: var(--ink-3); }
+
+  /* ---------- filters ---------- */
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; align-items: center; }
+  .filters .flabel { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); margin-right: 4px; }
+  .fbtn {
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em;
+    padding: 6px 13px; border: 1px solid var(--chip-bd); background: var(--surface);
+    color: var(--ink-2); border-radius: 999px; cursor: pointer; transition: all .12s ease;
+  }
+  .fbtn:hover { border-color: var(--ink-3); color: var(--ink); }
+  .fbtn[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--ground); }
+  .fbtn:focus-visible { outline: 2px solid var(--deep); outline-offset: 2px; }
+
+  /* ---------- news cards ---------- */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 12px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 3px;
+    padding: 17px 18px 16px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 9px;
+  }
+  .card[hidden] { display: none; }
+  .card-top { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+  .chip {
+    font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 600; letter-spacing: .1em;
+    border: 1px solid var(--chip-bd); color: var(--ink-2); padding: 2px 7px; border-radius: 2px;
+  }
+  .chip.region { background: var(--surface-2); }
+  .ticker { font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 600; color: var(--ink); letter-spacing: .04em; }
+  .card h3 {
+    font-family: "Archivo", Arial, sans-serif; font-weight: 600; font-size: 17.5px;
+    line-height: 1.28; letter-spacing: -.012em; margin: 0; text-wrap: balance;
+  }
+  .card p { margin: 0; font-size: 15.5px; line-height: 1.55; color: var(--ink-2); }
+  .card .facts { display: flex; flex-wrap: wrap; gap: 5px 16px; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; color: var(--ink-2); font-variant-numeric: tabular-nums; padding: 9px 0; border-top: 1px solid var(--rule-soft); border-bottom: 1px solid var(--rule-soft); }
+  .card .facts b { color: var(--ink); font-weight: 600; }
+  .why {
+    font-size: 15px; line-height: 1.55; color: var(--ink); border-left: 2px solid var(--deep);
+    padding-left: 11px;
+  }
+  .why span { font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--deep); display: block; margin-bottom: 2px; }
+  .src { margin-top: auto; padding-top: 4px; }
+  .src a {
+    font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--ink-3);
+    text-decoration: none; border-bottom: 1px solid var(--rule); letter-spacing: .03em;
+  }
+  .src a:hover { color: var(--deep); border-bottom-color: var(--deep); }
+  .src a:focus-visible { outline: 2px solid var(--deep); outline-offset: 2px; }
+
+  /* ---------- external factor rows ---------- */
+  .factors { display: flex; flex-direction: column; gap: 12px; }
+  .factor {
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 3px;
+    box-shadow: var(--shadow); display: grid; grid-template-columns: 152px 1fr; gap: 0;
+  }
+  .factor > .meta {
+    padding: 17px 16px; border-right: 1px solid var(--rule-soft); background: var(--surface-2);
+    display: flex; flex-direction: column; gap: 7px;
+  }
+  .factor > .bodyc { padding: 17px 18px; display: flex; flex-direction: column; gap: 9px; }
+  .factor > .bodyc p, .factor > .bodyc .why { max-width: 74ch; }
+  .factor > .bodyc h3 { max-width: 44ch; }
+  .meta .tag { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+  .meta .watch { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink); font-weight: 500; font-variant-numeric: tabular-nums; line-height: 1.35; }
+  .meta .watch small { display: block; color: var(--ink-3); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; font-weight: 400; margin-bottom: 2px; }
+  @media (max-width: 620px) {
+    .factor { grid-template-columns: 1fr; }
+    .factor > .meta { border-right: 0; border-bottom: 1px solid var(--rule-soft); flex-direction: row; align-items: baseline; gap: 14px; }
+  }
+
+  /* ---------- footer ---------- */
+  footer { margin-top: 60px; border-top: 2px solid var(--ink); padding-top: 18px; }
+  footer p { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; color: var(--ink-3); line-height: 1.7; max-width: 72ch; margin: 0 0 10px; }
+  footer b { color: var(--ink-2); font-weight: 600; }
+
+  /* ---------- tooltip ---------- */
+  #tip {
+    position: fixed; pointer-events: none; opacity: 0; transform: translate(-50%, -118%);
+    background: var(--ink); color: var(--ground); font-family: "IBM Plex Mono", monospace;
+    font-size: 11.5px; padding: 6px 9px; border-radius: 3px; white-space: nowrap;
+    transition: opacity .1s ease; z-index: 50; font-variant-numeric: tabular-nums;
+  }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <div class="kicker">
+    <span class="live">&#9679;&nbsp; Recurring scan</span>
+    <span>Mon &middot; Wed &middot; Fri &nbsp;01:00 UTC</span>
+    <span>US &amp; China tech &mdash; investment desk</span>
+  </div>
+  <h1>Tech Investment Scan</h1>
+  <div class="dateline">
+    <span>Edition <b>Thu 27 Aug 2026</b></span><span class="sep">/</span>
+    <span>Covers <b>Mon 24 Aug &ndash; Thu 27 Aug 2026</b></span><span class="sep">/</span>
+    <span>US sessions through 27 Aug open &middot; Asia through 24 Aug close</span>
+  </div>
+</header>
+
+<p class="lede">Nvidia carried the week. A chip-led selloff opened it, three flat-to-lower sessions ground through it, and a $96.2bn quarter with a $108bn guide &mdash; struck <em>assuming zero China compute</em> &mdash; ended it with the tape up about 1%. In Hong Kong the move ran the other way: Alibaba raised $10.2bn for AI and fell more than 10% doing it.</p>
+
+<!-- ============ SECTION 1 ============ -->
+<section id="indices">
+  <div class="sec-head">
+    <span class="sec-num">&sect; 01</span>
+    <h2>Index changes</h2>
+    <span class="sec-note">% change, session close</span>
+  </div>
+
+  <div class="tiles">
+    <div class="tile">
+      <div class="name">Nasdaq Composite</div>
+      <div class="lvl">25,980.19</div>
+      <div class="chg down"><span class="arrow">&#9660;</span> 0.76%</div>
+      <div class="asof">Close Mon 24 Aug &middot; &#8776;+1% Thu 27 Aug</div>
+    </div>
+    <div class="tile">
+      <div class="name">S&amp;P 500</div>
+      <div class="lvl">7,652.86</div>
+      <div class="chg down"><span class="arrow">&#9660;</span> 0.28%</div>
+      <div class="asof">Close Mon 24 Aug &middot; &minus;0.12% Wed 26 Aug</div>
+    </div>
+    <div class="tile">
+      <div class="name">PHLX Semis &middot; SOX</div>
+      <div class="lvl">11,611.2</div>
+      <div class="chg down"><span class="arrow">&#9660;</span> 29% <span style="color:var(--ink-3);font-weight:400">from Jun peak</span></div>
+      <div class="asof">Late-Aug level &middot; SOXX ETF &minus;2.7% Mon</div>
+    </div>
+    <div class="tile">
+      <div class="name">Hang Seng TECH</div>
+      <div class="lvl">4,582.18</div>
+      <div class="chg down"><span class="arrow">&#9660;</span> 3.86%</div>
+      <div class="asof">Midday Mon 24 Aug &middot; Alibaba placement</div>
+    </div>
+  </div>
+
+  <div class="panels">
+    <div>
+      <p class="panel-title">Mon 24 Aug <span>&mdash; the chip-led drawdown</span></p>
+      <svg viewBox="0 0 452 246" role="img" aria-label="Daily percent change on Monday 24 August 2026: S&amp;P 500 minus 0.28, Nasdaq Composite minus 0.76, Dow Jones plus 0.26, Semiconductors SOXX minus 2.70, Hang Seng TECH minus 3.86.">
+        <g stroke="var(--grid)" stroke-width="1">
+          <line x1="126" y1="36" x2="126" y2="214"></line>
+          <line x1="180" y1="36" x2="180" y2="214"></line>
+          <line x1="234" y1="36" x2="234" y2="214"></line>
+          <line x1="288" y1="36" x2="288" y2="214"></line>
+          <line x1="396" y1="36" x2="396" y2="214"></line>
+        </g>
+        <line x1="342" y1="36" x2="342" y2="214" stroke="var(--ink-3)" stroke-width="1"></line>
+        <g class="tick" text-anchor="middle">
+          <text x="126" y="228">&minus;4%</text><text x="180" y="228">&minus;3%</text>
+          <text x="234" y="228">&minus;2%</text><text x="288" y="228">&minus;1%</text>
+          <text x="342" y="228">0</text><text x="396" y="228">+1%</text>
+        </g>
+        <g class="lbl" text-anchor="end">
+          <text x="118" y="65">S&amp;P 500</text>
+          <text x="118" y="99">Nasdaq Comp.</text>
+          <text x="118" y="133">Dow Jones</text>
+          <text x="118" y="167">Semis &middot; SOXX</text>
+          <text x="118" y="201" class="lbl lbl-strong">Hang Seng TECH</text>
+        </g>
+        <g fill="var(--loss)">
+          <path class="bar" data-t="S&amp;P 500 &middot; Mon 24 Aug &middot; &minus;0.28%" d="M342,53 L330.88,53 Q326.88,53 326.88,57 L326.88,65 Q326.88,69 330.88,69 L342,69 Z"></path>
+          <path class="bar" data-t="Nasdaq Composite &middot; Mon 24 Aug &middot; &minus;0.76%" d="M342,87 L304.96,87 Q300.96,87 300.96,91 L300.96,99 Q300.96,103 304.96,103 L342,103 Z"></path>
+          <path class="bar" data-t="Semis (SOXX ETF) &middot; Mon 24 Aug &middot; &minus;2.70%" d="M342,155 L200.2,155 Q196.2,155 196.2,159 L196.2,167 Q196.2,171 200.2,171 L342,171 Z"></path>
+          <path class="bar" data-t="Hang Seng TECH &middot; Mon 24 Aug midday &middot; &minus;3.86%" d="M342,189 L137.56,189 Q133.56,189 133.56,193 L133.56,201 Q133.56,205 137.56,205 L342,205 Z"></path>
+        </g>
+        <g fill="var(--gain)">
+          <path class="bar" data-t="Dow Jones &middot; Mon 24 Aug &middot; +0.26%" d="M342,121 L352.04,121 Q356.04,121 356.04,125 L356.04,133 Q356.04,137 352.04,137 L342,137 Z"></path>
+        </g>
+        <g class="val" text-anchor="start">
+          <text x="404" y="65" fill="var(--loss)">&minus;0.28%</text>
+          <text x="404" y="99" fill="var(--loss)">&minus;0.76%</text>
+          <text x="404" y="133" fill="var(--gain)">+0.26%</text>
+          <text x="404" y="167" fill="var(--loss)">&minus;2.70%</text>
+          <text x="404" y="201" fill="var(--loss)">&minus;3.86%</text>
+        </g>
+      </svg>
+    </div>
+
+    <div>
+      <p class="panel-title">Wed 26 Aug <span>&mdash; holding still for Nvidia</span></p>
+      <svg viewBox="0 0 452 246" role="img" aria-label="Daily percent change on Wednesday 26 August 2026: S&amp;P 500 minus 0.12, Nasdaq Composite minus 0.16, Dow Jones minus 0.08. No confirmed close for semiconductors or Hang Seng TECH in this scan.">
+        <g stroke="var(--grid)" stroke-width="1">
+          <line x1="126" y1="36" x2="126" y2="214"></line>
+          <line x1="180" y1="36" x2="180" y2="214"></line>
+          <line x1="234" y1="36" x2="234" y2="214"></line>
+          <line x1="288" y1="36" x2="288" y2="214"></line>
+          <line x1="396" y1="36" x2="396" y2="214"></line>
+        </g>
+        <line x1="342" y1="36" x2="342" y2="214" stroke="var(--ink-3)" stroke-width="1"></line>
+        <g class="tick" text-anchor="middle">
+          <text x="126" y="228">&minus;4%</text><text x="180" y="228">&minus;3%</text>
+          <text x="234" y="228">&minus;2%</text><text x="288" y="228">&minus;1%</text>
+          <text x="342" y="228">0</text><text x="396" y="228">+1%</text>
+        </g>
+        <g class="lbl" text-anchor="end">
+          <text x="118" y="65">S&amp;P 500</text>
+          <text x="118" y="99">Nasdaq Comp.</text>
+          <text x="118" y="133">Dow Jones</text>
+          <text x="118" y="167">Semis &middot; SOXX</text>
+          <text x="118" y="201" class="lbl lbl-strong">Hang Seng TECH</text>
+        </g>
+        <g fill="var(--loss)">
+          <path class="bar" data-t="S&amp;P 500 &middot; Wed 26 Aug &middot; &minus;0.12%" d="M342,53 L339.52,53 Q335.52,53 335.52,57 L335.52,65 Q335.52,69 339.52,69 L342,69 Z"></path>
+          <path class="bar" data-t="Nasdaq Composite &middot; Wed 26 Aug &middot; &minus;0.16%" d="M342,87 L337.36,87 Q333.36,87 333.36,91 L333.36,99 Q333.36,103 337.36,103 L342,103 Z"></path>
+          <path class="bar" data-t="Dow Jones &middot; Wed 26 Aug &middot; &minus;0.08%" d="M342,121 L341.68,121 Q337.68,121 337.68,125 L337.68,133 Q337.68,137 341.68,137 L342,137 Z"></path>
+        </g>
+        <g class="val" text-anchor="start">
+          <text x="404" y="65" fill="var(--loss)">&minus;0.12%</text>
+          <text x="404" y="99" fill="var(--loss)">&minus;0.16%</text>
+          <text x="404" y="133" fill="var(--loss)">&minus;0.08%</text>
+        </g>
+        <g class="na" text-anchor="middle">
+          <text x="234" y="167">no confirmed close in scan</text>
+          <text x="234" y="201">no confirmed close in scan</text>
+        </g>
+      </svg>
+    </div>
+
+    <p class="chart-cap">Two sessions with fully confirmed cross-index closes, drawn on a shared scale. Monday's damage was concentrated in silicon &mdash; Micron &minus;5.8%, AMD more than &minus;3%, Broadcom more than &minus;2% &mdash; while the Dow rose on blue-chip strength, the classic rotation signature. Wednesday the whole tape went quiet ahead of the Nvidia print: Nasdaq-100 &minus;0.5%, Russell 2000 <span style="color:var(--gain)">+0.50%</span>. Rows without a confirmed close in this scan window are marked rather than estimated.</p>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <caption class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Index levels and session changes, 24&ndash;27 August 2026</caption>
+      <thead>
+        <tr><th scope="col">Index</th><th scope="col">Level</th><th scope="col">Mon 24</th><th scope="col">Wed 26</th><th scope="col">Thu 27</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>S&amp;P 500</td><td>7,652.86</td><td class="down">&minus;0.28%</td><td class="down">&minus;0.12%</td><td class="up">higher</td></tr>
+        <tr><td>Nasdaq Composite</td><td>25,980.19</td><td class="down">&minus;0.76%</td><td class="down">&minus;0.16%</td><td class="up">&#8776;+1%</td></tr>
+        <tr><td>Dow Jones</td><td>53,417.16</td><td class="up">+0.26%</td><td class="down">&minus;0.08%</td><td class="dim">&mdash;</td></tr>
+        <tr><td>Nasdaq-100</td><td class="dim">&mdash;</td><td class="dim">&mdash;</td><td class="down">&minus;0.50%</td><td class="dim">&mdash;</td></tr>
+        <tr><td>Russell 2000</td><td class="dim">&mdash;</td><td class="dim">&mdash;</td><td class="up">+0.50%</td><td class="dim">&mdash;</td></tr>
+        <tr><td>PHLX Semis (SOX)</td><td>11,611.2</td><td class="down">&minus;2.70%<span class="dim"> SOXX</span></td><td class="dim">&mdash;</td><td class="up">higher</td></tr>
+        <tr><td>Hang Seng TECH</td><td>4,582.18</td><td class="down">&minus;3.86%<span class="dim"> midday</span></td><td class="dim">&mdash;</td><td class="dim">&mdash;</td></tr>
+        <tr><td>Hang Seng Index</td><td>25,463.50</td><td class="down">&minus;2.10%<span class="dim"> midday</span></td><td class="dim">&mdash;</td><td class="dim">&mdash;</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ SECTION 2 ============ -->
+<section id="companies">
+  <div class="sec-head">
+    <span class="sec-num">&sect; 02</span>
+    <h2>Company news</h2>
+    <span class="sec-note">9 items</span>
+  </div>
+
+  <div class="filters">
+    <span class="flabel">Region</span>
+    <button class="fbtn" type="button" data-filter="all" aria-pressed="true">All</button>
+    <button class="fbtn" type="button" data-filter="us" aria-pressed="false">United States</button>
+    <button class="fbtn" type="button" data-filter="cn" aria-pressed="false">China</button>
+  </div>
+
+  <div class="cards" id="cardgrid">
+
+    <article class="card" data-region="us">
+      <div class="card-top"><span class="chip region">US</span><span class="ticker">NVDA</span><span class="chip">Earnings</span></div>
+      <h3>Nvidia guides to $108bn while assuming no China revenue at all</h3>
+      <div class="facts">
+        <span>Rev <b>$96.2bn</b> +106% y/y</span>
+        <span>Data Center <b>$89.0bn</b> +117% y/y</span>
+        <span>GM <b>75.0%</b></span>
+        <span>EPS <b>$2.46</b> GAAP</span>
+      </div>
+      <p>Q2 FY2027 (quarter ended 26 Jul) beat on every line, driven by the Blackwell Ultra ramp; hyperscale revenue more than doubled year over year. Q3 guidance of $108bn assumes zero China compute. CFO Colette Kress and Jensen Huang pointed to roughly 70% revenue growth in fiscal 2028, far above consensus.</p>
+      <div class="why"><span>Why it matters</span>The cleanest read on the AI capex cycle, and the guide is struck with China at zero &mdash; so any policy thaw is upside not yet in the model. Shares rose about 6% the next session and pulled the Nasdaq up roughly 1% with them.</div>
+      <div class="src"><a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000073/q2fy27pr.htm" target="_blank" rel="noopener">SEC 8-K, Q2 FY27 release</a></div>
+    </article>
+
+    <article class="card" data-region="cn">
+      <div class="card-top"><span class="chip region">CN</span><span class="ticker">BABA / 9988.HK</span><span class="chip">Equity raise</span></div>
+      <h3>Alibaba raises $10.2bn for AI &mdash; and drops more than 10% doing it</h3>
+      <div class="facts">
+        <span>Size <b>HK$80bn</b></span>
+        <span>Shares <b>710m</b> @ HK$112.70</span>
+        <span>Dilution <b>&#8776;3.6%</b></span>
+        <span>Closed <b>26 Aug</b></span>
+      </div>
+      <p>The largest follow-on ever by a Hong Kong-listed company and the third largest globally in 2026, behind only Alphabet and Intel. Every dollar is earmarked for AI: about 60% (HK$47.9bn) to expand global compute infrastructure, about 40% (HK$31.9bn) to hyperscale AI data centres and an Agentic Cloud upgrade of legacy cloud.</p>
+      <div class="why"><span>Why it matters</span>A conviction signal on AI demand paid for with equity rather than cash flow &mdash; which is exactly why the stock fell. It also dragged the whole Hong Kong tape: the Hang Seng TECH index was down 3.86% at Monday midday, with Alibaba the single biggest contributor.</div>
+      <div class="src"><a href="https://www.scmp.com/tech/big-tech/article/3364957/alibaba-issue-hk80-billion-new-shares-global-ai-push" target="_blank" rel="noopener">SCMP &middot; also Alibaba 6-K, SEC</a></div>
+    </article>
+
+    <article class="card" data-region="cn">
+      <div class="card-top"><span class="chip region">CN</span><span class="ticker">BIDU</span><span class="chip">Earnings</span></div>
+      <h3>Baidu misses on both lines, ADR hits a near one-year low</h3>
+      <div class="facts">
+        <span>Rev <b>miss</b></span>
+        <span>EPS <b>miss</b></span>
+        <span>ADR <b class="down">&minus;12.7%</b></span>
+        <span>Reported <b>18 Aug</b></span>
+      </div>
+      <p>Q2 2026 revenue and earnings both came in under Wall Street estimates and the Nasdaq-listed shares fell 12.7% to a near one-year low, with net profit down sharply year over year. Robin Li publicly committed to returning Ernie to the first tier of models.</p>
+      <div class="why"><span>Why it matters</span>The clearest divergence inside China tech. Tencent is converting AI into revenue today; Baidu is still spending against a model gap. Treat &ldquo;China AI&rdquo; as a stock-picking problem, not a basket trade.</div>
+      <div class="src"><a href="https://www.prnewswire.com/news-releases/baidu-announces-second-quarter-2026-results-302853860.html" target="_blank" rel="noopener">Baidu Q2 2026 results</a></div>
+    </article>
+
+    <article class="card" data-region="cn">
+      <div class="card-top"><span class="chip region">CN</span><span class="ticker">0700.HK</span><span class="chip">Earnings</span></div>
+      <h3>Tencent&rsquo;s AI ad model is already showing up in the P&amp;L</h3>
+      <div class="facts">
+        <span>Rev <b>HK$204.8bn</b></span>
+        <span>EPS <b>HK$7.43</b> vs 7.32e</span>
+        <span>Ads <b>+22%</b> y/y</span>
+        <span>Games <b>+17%</b> y/y</span>
+      </div>
+      <p>Reported 12 August. Marketing services grew 22% year on year to RMB43.6bn, which Tencent attributed directly to its AI ad recommendation model; domestic gaming rose 17% to RMB47.3bn.</p>
+      <div class="why"><span>Why it matters</span>Rare in this cycle: AI spend with a visible, attributable revenue line attached rather than a promise of one. That is what separates Tencent from the rest of the China complex right now.</div>
+      <div class="src"><a href="https://www.investing.com/news/stock-market-news/tencent-alibaba-and-baidu-how-chinas-tech-giants-diverged-in-q2-2026-93CH-4870649" target="_blank" rel="noopener">Investing.com &middot; China Q2 divergence</a></div>
+    </article>
+
+    <article class="card" data-region="cn">
+      <div class="card-top"><span class="chip region">CN</span><span class="ticker">1810.HK</span><span class="chip">Earnings</span></div>
+      <h3>Xiaomi&rsquo;s adjusted profit falls 42.6%</h3>
+      <div class="facts"><span>Adj. net profit <b class="down">&minus;42.6%</b> y/y</span><span>Reported <b>18 Aug</b></span></div>
+      <p>Q2 2026 adjusted net profit dropped 42.6% year over year, reported the same day as Baidu&rsquo;s miss &mdash; a rough session for the China hardware and platform complex.</p>
+      <div class="why"><span>Why it matters</span>The EV and hardware ramp is consuming margin faster than scale is replacing it. A reminder that China consumer tech and China AI infrastructure are on different trajectories.</div>
+      <div class="src"><a href="https://eu.36kr.com/en/p/3947582180988547" target="_blank" rel="noopener">36Kr &middot; Baidu and Xiaomi Q2</a></div>
+    </article>
+
+    <article class="card" data-region="us">
+      <div class="card-top"><span class="chip region">US</span><span class="ticker">CRM / CRWD</span><span class="chip">Earnings</span></div>
+      <h3>Salesforce and CrowdStrike land on the same night as Nvidia</h3>
+      <p>Both reported into the 26 August window and both contributed to Thursday&rsquo;s advance, broadening the rally beyond semiconductors into software and security as investors turned to the Fed&rsquo;s Jackson Hole gathering.</p>
+      <div class="why"><span>Why it matters</span>Software joining the move matters more than the move itself &mdash; it argues the AI trade is spreading down the stack rather than concentrating further in one chip name.</div>
+      <div class="src"><a href="https://finance.yahoo.com/markets/live/stock-market-today-thursday-august-27-dow-sp-500-nasdaq-082144520.html" target="_blank" rel="noopener">Yahoo Finance &middot; 27 Aug live</a></div>
+    </article>
+
+    <article class="card" data-region="us">
+      <div class="card-top"><span class="chip region">US</span><span class="ticker">AAPL &middot; GOOGL &middot; AMZN &middot; MSFT &middot; META</span><span class="chip">Silicon</span></div>
+      <h3>Custom silicon quietly becomes the default at every hyperscaler</h3>
+      <p>Apple detailed how in-house processor design improves performance and battery life, while Google, Amazon, Microsoft and Meta pursue the same strategy inside their data centres.</p>
+      <div class="why"><span>Why it matters</span>A slow structural drag on merchant silicon&rsquo;s addressable market. It does not dent Nvidia this quarter or next, but it is the mechanism by which the current margin structure eventually normalises.</div>
+      <div class="src"><a href="https://techstartups.com/2026/08/24/top-tech-news-today-august-24-2026-alibaba-amazon-hugging-face-nvidia-xpeng-more/" target="_blank" rel="noopener">Tech Startups &middot; 24 Aug roundup</a></div>
+    </article>
+
+    <article class="card" data-region="us">
+      <div class="card-top"><span class="chip region">US</span><span class="ticker">AMZN</span><span class="chip">Pricing</span></div>
+      <h3>Amazon raises device prices as component costs climb</h3>
+      <p>Rising component costs are being passed through to consumer hardware pricing, while power-infrastructure companies are increasingly being treated as acquisition targets.</p>
+      <div class="why"><span>Why it matters</span>Memory and component inflation is now reaching the shelf. Watch it as an early input into goods inflation &mdash; the same print the Fed is reading in September.</div>
+      <div class="src"><a href="https://techstartups.com/2026/08/24/top-tech-news-today-august-24-2026-alibaba-amazon-hugging-face-nvidia-xpeng-more/" target="_blank" rel="noopener">Tech Startups &middot; 24 Aug roundup</a></div>
+    </article>
+
+    <article class="card" data-region="cn">
+      <div class="card-top"><span class="chip region">CN</span><span class="ticker">XPEV</span><span class="chip">Funding</span></div>
+      <h3>XPeng raises over $900m for humanoid robots</h3>
+      <p>Part of a wider week of physical-AI financing across Beijing, Hong Kong and Tokyo, alongside reports that Nvidia is putting billions behind an open-weight AI push and weighing another investment in Perplexity.</p>
+      <div class="why"><span>Why it matters</span>Capital is rotating from AI models toward AI embodiment &mdash; robotics, robotaxis, physical systems. Early, but it is where the next capex cycle gets argued about.</div>
+      <div class="src"><a href="https://techstartups.com/2026/08/24/top-tech-news-today-august-24-2026-alibaba-amazon-hugging-face-nvidia-xpeng-more/" target="_blank" rel="noopener">Tech Startups &middot; 24 Aug roundup</a></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ SECTION 3 ============ -->
+<section id="external">
+  <div class="sec-head">
+    <span class="sec-num">&sect; 03</span>
+    <h2>External factors</h2>
+    <span class="sec-note">policy &middot; rates &middot; trade</span>
+  </div>
+
+  <div class="factors">
+
+    <div class="factor">
+      <div class="meta">
+        <span class="tag">Monetary policy</span>
+        <span class="watch"><small>Next decision</small>16 Sep 2026</span>
+      </div>
+      <div class="bodyc">
+        <h3 style="font-family:Archivo,Arial,sans-serif;font-weight:600;font-size:18px;margin:0;letter-spacing:-.012em">Sticky inflation has taken the September cut off the table &mdash; and put a hike on it</h3>
+        <p style="margin:0;color:var(--ink-2);font-size:15.5px">The Fed held at 3.50&ndash;3.75% on 29 July. Its August forecast has PCE inflation running at 3.6%, well above the 2% target. As of 12 August, futures put roughly 40% on a September <em>hike</em> and 60% on a hold. Jackson Hole fell inside this scan window.</p>
+        <div class="why"><span>Why it matters</span>Long-duration tech multiples are the first thing repriced when the terminal rate drifts up. The AI earnings story is intact; the discount rate applied to it is the risk.</div>
+        <div class="src"><a href="https://www.forbes.com/sites/billconerly/2026/08/12/why-the-fed-will-raise-rates-in-september-despite-cooler-cpi/" target="_blank" rel="noopener">Forbes &middot; 12 Aug</a></div>
+      </div>
+    </div>
+
+    <div class="factor">
+      <div class="meta">
+        <span class="tag">Export controls</span>
+        <span class="watch"><small>Status</small>Tightened May 2026</span>
+      </div>
+      <div class="bodyc">
+        <h3 style="font-family:Archivo,Arial,sans-serif;font-weight:600;font-size:18px;margin:0;letter-spacing:-.012em">China is currently an option on Nvidia&rsquo;s numbers, not a line in them</h3>
+        <p style="margin:0;color:var(--ink-2);font-size:15.5px">A January 2026 Commerce rule reopened China to Nvidia&rsquo;s H200 and AMD&rsquo;s MI325X. Then in late May, Commerce moved to restrict the most advanced parts &mdash; Rubin, Blackwell, MI350x &mdash; from Chinese-headquartered entities <em>located outside China</em>, closing the offshore-subsidiary route. Licensing now follows the parent company, not the address.</p>
+        <div class="why"><span>Why it matters</span>Nvidia&rsquo;s $108bn guide assumes zero China compute, so the restriction is already fully discounted. That makes the policy asymmetric for holders: relaxation is upside, further tightening costs nothing that was being counted.</div>
+        <div class="src"><a href="https://www.cnbc.com/2026/05/31/us-takes-step-to-halt-nvidia-ai-chip-shipments-to-chinese-firms-outside-china.html" target="_blank" rel="noopener">CNBC &middot; 31 May</a></div>
+      </div>
+    </div>
+
+    <div class="factor">
+      <div class="meta">
+        <span class="tag">Trade truce</span>
+        <span class="watch"><small>Cliff date</small>10 Nov 2026</span>
+      </div>
+      <div class="bodyc">
+        <h3 style="font-family:Archivo,Arial,sans-serif;font-weight:600;font-size:18px;margin:0;letter-spacing:-.012em">The tariff truce holds, on a clock</h3>
+        <p style="margin:0;color:var(--ink-2);font-size:15.5px">Fentanyl duties were cut from 20% to 10%, taking the overall rate on Chinese imports from 41% to 31%, and the 24% reciprocal duties are suspended until 10 November 2026. China in turn suspended its October 2025 export controls on rare earths, gallium, germanium, antimony and graphite, issuing general licences for US end users. Analysts read the arrangement as a tactical truce rather than a strategic shift.</p>
+        <div class="why"><span>Why it matters</span>Diary 10 November. Both sides retained their leverage, so the expiry is a live repricing event for anything with a China supply chain or a China revenue line.</div>
+        <div class="src"><a href="https://www.coface.com/news-economy-and-insights/us-china-trade-agreement-a-tactical-truce-not-a-strategic-shift" target="_blank" rel="noopener">Coface &middot; tactical truce</a></div>
+      </div>
+    </div>
+
+    <div class="factor">
+      <div class="meta">
+        <span class="tag">Geopolitics</span>
+        <span class="watch"><small>Hit the tape</small>Mon 24 Aug</span>
+      </div>
+      <div class="bodyc">
+        <h3 style="font-family:Archivo,Arial,sans-serif;font-weight:600;font-size:18px;margin:0;letter-spacing:-.012em">Iran sanctions and failed US&ndash;Canada talks set Monday&rsquo;s tone</h3>
+        <p style="margin:0;color:var(--ink-2);font-size:15.5px">New US economic sanctions on Iran landed alongside collapsed US&ndash;Canada trade talks and renewed reciprocal tariff threats, compounding pre-Nvidia earnings anxiety into the week&rsquo;s worst tech session.</p>
+        <div class="why"><span>Why it matters</span>Tariff risk is no longer a China-only variable. Monday showed how fast a North American trade headline transmits into semiconductor multiples.</div>
+        <div class="src"><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-24-2026" target="_blank" rel="noopener">TheStreet &middot; 24 Aug</a></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p><b>Scan window.</b> Monday 24 August 2026 through Thursday 27 August 2026. US index levels are confirmed closes for 24 and 26 August; 27 August figures were intraday at the time of the scan. Asia figures are Monday 24 August, with Hang Seng readings taken at midday. Company results outside the window (Tencent 12 Aug, Baidu and Xiaomi 18 Aug) are carried forward as standing context for the China section.</p>
+  <p><b>Provenance.</b> Compiled from the same brief as the recurring &ldquo;Tech Investment News Scan (Mon/Wed/Fri)&rdquo; scheduled task &mdash; three fixed headings, source cited per item, no padding where nothing moved. Every figure on this page links to its source. Nothing here is investment advice.</p>
+</footer>
+
+</div>
+
+<div id="tip" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  var tip = document.getElementById('tip');
+  document.querySelectorAll('.bar').forEach(function (bar) {
+    bar.addEventListener('mousemove', function (e) {
+      tip.textContent = bar.getAttribute('data-t');
+      tip.style.left = e.clientX + 'px';
+      tip.style.top = e.clientY + 'px';
+      tip.style.opacity = '1';
+    });
+    bar.addEventListener('mouseleave', function () { tip.style.opacity = '0'; });
+  });
+
+  var btns = document.querySelectorAll('.fbtn');
+  var cards = document.querySelectorAll('#cardgrid .card');
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var f = btn.getAttribute('data-filter');
+      btns.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+      cards.forEach(function (c) {
+        c.hidden = !(f === 'all' || c.getAttribute('data-region') === f);
+      });
+      var shown = 0;
+      cards.forEach(function (c) { if (!c.hidden) shown++; });
+      var note = document.querySelector('#companies .sec-note');
+      if (note) { note.textContent = shown + (shown === 1 ? ' item' : ' items'); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
