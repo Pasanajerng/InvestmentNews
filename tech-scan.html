@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Recurring US and China tech investment briefing: index moves, company news, and policy factors for 24-27 August 2026.">
+<meta name="description" content="Recurring US and China tech investment briefing: index moves, company news, and policy factors.">
 <title>Tech Investment Scan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -204,7 +204,13 @@
     text-decoration: none; border-bottom: 1px solid var(--rule); letter-spacing: .03em;
   }
   .src a:hover { color: var(--deep); border-bottom-color: var(--deep); }
+  .src a { display: inline-block; padding: 6px 0; }
   .src a:focus-visible { outline: 2px solid var(--deep); outline-offset: 2px; }
+
+  @media (max-width: 620px) {
+    .panels > div { overflow-x: auto; }
+    .panels svg { min-width: 404px; }
+  }
 
   /* ---------- external factor rows ---------- */
   .factors { display: flex; flex-direction: column; gap: 12px; }
@@ -226,6 +232,24 @@
     .factor { grid-template-columns: 1fr; }
     .factor > .meta { border-right: 0; border-bottom: 1px solid var(--rule-soft); flex-direction: row; align-items: baseline; gap: 14px; }
   }
+
+  /* ---------- edition log ---------- */
+  .log { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .log li {
+    display: grid; grid-template-columns: 128px 1fr; gap: 4px 18px;
+    padding: 13px 0; border-bottom: 1px solid var(--rule-soft);
+  }
+  .log li:first-child { border-top: 1px solid var(--rule); }
+  .log li:last-child { border-bottom: 0; }
+  .log .d {
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 600;
+    letter-spacing: .06em; color: var(--ink-3); text-transform: uppercase;
+    font-variant-numeric: tabular-nums; padding-top: 2px;
+  }
+  .log li[data-current="true"] .d { color: var(--deep); }
+  .log .t { font-size: 15.5px; line-height: 1.5; color: var(--ink-2); max-width: 74ch; }
+  .log .t b { color: var(--ink); font-weight: 600; }
+  @media (max-width: 560px) { .log li { grid-template-columns: 1fr; gap: 3px; } }
 
   /* ---------- footer ---------- */
   footer { margin-top: 60px; border-top: 2px solid var(--ink); padding-top: 18px; }
@@ -582,6 +606,21 @@
     </div>
 
   </div>
+</section>
+
+<!-- ============ SECTION 4 ============ -->
+<section id="log">
+  <div class="sec-head">
+    <span class="sec-num">&sect; 04</span>
+    <h2>Edition log</h2>
+    <span class="sec-note">newest first</span>
+  </div>
+  <ol class="log" id="editionlog">
+    <li data-current="true">
+      <span class="d">27 Aug 2026</span>
+      <span class="t"><b>Nvidia clears the bar; Alibaba pays for AI in equity.</b> A $96.2bn quarter and a $108bn guide struck at zero China compute lifted the Nasdaq about 1% after a chip-led selloff opened the week. In Hong Kong, Alibaba&rsquo;s $10.2bn placement took the Hang Seng TECH index down 3.86%.</span>
+    </li>
+  </ol>
 </section>
 
 <footer>
