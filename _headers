@@ -1,0 +1,18 @@
+# Cloudflare Pages response headers.
+# Syntax: a path pattern, then indented "Header: value" lines.
+
+/*
+  # Keep this site out of search engines. Cloudflare Access is the real
+  # lock; this is belt-and-braces for the window before Access is enabled.
+  X-Robots-Tag: noindex, nofollow
+  # Don't let other sites embed this page in a frame.
+  X-Frame-Options: DENY
+  # Don't let browsers second-guess declared content types.
+  X-Content-Type-Options: nosniff
+  # Don't leak this site's URL to the news sites we link out to.
+  Referrer-Policy: no-referrer
+
+# From step 3 onward the briefing data lives here. It must never be
+# served stale, or the page shows yesterday's edition after a refresh.
+/data/*
+  Cache-Control: no-store
