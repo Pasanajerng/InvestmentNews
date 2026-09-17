@@ -1,0 +1,3 @@
+# Private briefing. Not for indexing.
+User-agent: *
+Disallow: /

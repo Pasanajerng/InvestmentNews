@@ -1,0 +1,16 @@
+# Local environment / secrets — never commit these.
+.env
+.env.*
+*.key
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python (arrives in step 3 with the collector script)
+__pycache__/
+*.pyc
+.venv/
+venv/
